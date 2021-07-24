@@ -1,6 +1,9 @@
 .text-main {
     color: #42a2a2;
 }
+.bg-main {
+    background-color: #42a2a2;
+}
 
 .breadCrumBox ul li:not(:last-child):after {
     content: "/";
@@ -123,3 +126,19 @@
 .sizes > div > span:hover, .sizes > div.active span {
     border-color: #4acccd;
 }
+
+.shake {
+    animation: shake 250ms 2 linear;
+}
+
+@keyframes shake {
+    0% {
+      transform: translate(10px, 0);
+    }
+    50% {
+      transform: translate(-10px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
