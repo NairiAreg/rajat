@@ -4,6 +4,24 @@
 .bg-main {
     background-color: #42a2a2;
 }
+.border-main {
+    border: 1px solid #42a2a2;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+
+.btn-main {
+    border: 1px solid #42a2a2;
+    border-radius: 10px;
+    color: #42a2a2;
+}
+.btn-main:hover {
+    border: 1px solid #42a2a2;
+    color: white;
+    background-color: #42a2a2;
+}
 
 .breadCrumBox ul li:not(:last-child):after {
     content: "/";
@@ -39,7 +57,7 @@
     object-fit: cover;
 }
 
-#lightSliderVertical .avtive a{
+#lightSliderVertical .avtive a {
     display: inline !important;
 }
 
@@ -55,18 +73,17 @@
 
 /* //! Slider */
 
-
 .title {
     margin-bottom: 2px;
     font-size: 14px;
-    font-family: montserrat,sans-serif;
+    font-family: montserrat, sans-serif;
     line-height: 20px;
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, 0.7);
     font-weight: 500;
 }
 
 .subTitle {
-    font-family: montserrat-bold,sans-serif;
+    font-family: montserrat-bold, sans-serif;
     display: inline-block;
     max-width: 100%;
     padding: 5px 7px;
@@ -99,7 +116,7 @@
     padding: 0 !important;
 }
 
-.sizes > div.disabled span{
+.sizes > div.disabled span {
     cursor: default;
     background: #f5f5f5;
     text-decoration: line-through;
@@ -122,8 +139,8 @@
     align-items: center;
 }
 
-
-.sizes > div > span:hover, .sizes > div.active span {
+.sizes > div > span:hover,
+.sizes > div.active span {
     border-color: #4acccd;
 }
 
@@ -131,14 +148,61 @@
     animation: shake 250ms 2 linear;
 }
 
+.vr {
+    border-right: 2px solid #979797;
+}
+
+.descriptionWarpper {
+    width: 100%;
+    margin: 34px 0 0;
+    padding: 50px 0;
+    background: hsla(0, 0%, 96.1%, 0.55);
+}
+
+.progressBar {
+    width: 100%;
+    background: lightgray;
+    height: 9px;
+    border-radius: 10px;
+}
+.progressBar > div {
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+}
+
+.cartSup {
+    margin-left: 0;
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    border-radius: 50%;
+    line-height: 1.7;
+    background: #fdd835;
+    color: #000000cc;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-family: montserrat-regular,sans-serif;
+}
+
+#bag {
+    min-height: 500px;
+}
+
 @keyframes shake {
     0% {
-      transform: translate(10px, 0);
+        transform: translate(10px, 0);
     }
     50% {
-      transform: translate(-10px, 0);
+        transform: translate(-10px, 0);
     }
     100% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
-  }
+}
+@media (max-width: 575px) {
+    .vr {
+        border: none;
+    }
+}

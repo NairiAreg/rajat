@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+  $("sup.cartSup").html(JSON.parse(localStorage.getItem("arr")).length);
+
+
+  !localStorage.getItem("arr") && localStorage.setItem("arr", "[]");
+  !localStorage.getItem("id") && localStorage.setItem("id", "1");
+
+
   $('.sizes .col-2').on('click', function () {
     $('.sizes .col-2').removeClass('active');
     $(this).addClass("active");
@@ -10,6 +18,16 @@ $(document).ready(function () {
       setTimeout(() => {
         $(".sizes").removeClass('shake');
       }, 500);
+    } else {
+      let a = JSON.parse(localStorage.getItem("arr"));
+
+      a.push([localStorage.getItem("id"),$('.desc .title').text(), $('.desc .price').text(), $('.desc .text-secondary').text(), $('.desc .col-2.active span').text(), $('#lightSliderVertical > li:nth-child(2) > a > img').attr('src')]);
+      localStorage.setItem("arr", JSON.stringify(a));
+      
+      localStorage.setItem("id", Number(localStorage.getItem("id"))+1);
+
+      $("sup.cartSup").html(Number($("sup.cartSup").html()) + 1);
+
     }
   })
 
