@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
+  !localStorage.getItem("arr") && localStorage.setItem("arr", "[]");
+  !localStorage.getItem("id") && localStorage.setItem("id", "1");
+
+
+  
   $("sup.cartSup").html(JSON.parse(localStorage.getItem("arr")).length);
 
 
-  !localStorage.getItem("arr") && localStorage.setItem("arr", "[]");
-  !localStorage.getItem("id") && localStorage.setItem("id", "1");
 
 
   $('.sizes .col-2').on('click', function () {

@@ -11,7 +11,7 @@ $(document).ready(function () {
   const bagList = () => {
     if (JSON.parse(localStorage.getItem("arr")).length) {
       $("#bag > div:first-child").addClass('d-none');
-      $("#bag > div:last-child").removeClass('d-none');
+      $("#bagForm").removeClass('d-none');
       let bigCash = 0,
         smallCash = 0,
         profit = 0;
@@ -117,14 +117,13 @@ $(document).ready(function () {
           if (Number($("sup.cartSup").html()) == 0) {
             $("#bag > div:first-child").removeClass('d-none');
             $("#bagForm").addClass('d-none');
+            // alert();
           } else {
-            setTimeout(() => {
               $("#bag .row > .col-md-6:first-child").html('');
-              $("#bagForm").html('');
+              $("#bagForm .col-md-6:last-child").html('');
               bagList();
-            }, 1000);
           }
-        }, 1000);
+        }, 600);
       });
 
       $(".addAddress").on("click", function (e) {
@@ -172,7 +171,7 @@ $(document).ready(function () {
           
           $(`
           <button type="submit" class="btn btn-main addAddress">
-          SUBMIT
+            SUBMIT
           </button>
           `).insertAfter(this);
           $(this).remove();
@@ -201,17 +200,10 @@ $(document).ready(function () {
             })
 
         }
-        else {
-          // alert()
-          console.log($('input[name="uName"]').val(), $('input[name="state"]').val(), $('input[name="city"]').val(), $('input[name="address"]').val(), $('input[name="house"]').val(), $('input[name="pin"]').val());
-          if ($('input[name="uName"]').val() && $('input[name="state"]').val() && $('input[name="city"]').val() && $('input[name="address"]').val() && $('input[name="house"]').val() && $('input[name="pin"]').val()) {
-            $("#bagForm").submit();
-          }
-          else {
-            alert();
-          }
-        }
       });
+    } else {
+      $("#bag > div:first-child").removeClass('d-none');
+      $("#bagForm").addClass('d-none');
     }
   }
   bagList();
