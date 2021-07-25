@@ -95,6 +95,11 @@
     margin-top: 20px;
 }
 
+.desc button.bg-main {
+    position: sticky;
+    bottom: 0;
+}
+
 .colorChxol {
     border-radius: 4px;
     border: 2px solid #51cccc;
