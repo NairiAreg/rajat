@@ -34,16 +34,6 @@ echo count($size);
 echo "<br/>";
 
 for ($i = 0; $i < count($size); $i++) {
-    // echo "The number is: $i <br>";
-    echo $size[$i] . " ";
-    echo $qnt[$i] . " ";
-    echo $color[$i] . " ";
-    echo $title[$i] . " ";
-    echo $price[$i] . " ";
-    echo "<br/>";
-}
-
-for ($i = 0; $i < count($size); $i++) {
     //  $sql="INSERT INTO pl_tbl (p_id,po_name,po_val)
     //  VALUES ('$id','$data['data']['name_'.$i]','$data['data']['val_'.$i]')";
 
@@ -56,6 +46,8 @@ for ($i = 0; $i < count($size); $i++) {
 
 if ($conn->query($sql) === true) {
     echo "New record created successfully";
+    header('Location: index.html');
+    exit;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
