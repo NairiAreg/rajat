@@ -21,7 +21,7 @@ $(document).ready(function () {
     } else {
       let a = JSON.parse(localStorage.getItem("arr"));
 
-      a.push([localStorage.getItem("id"),$('.desc .title').text(), $('.desc .price').text(), $('.desc .text-secondary').text(), $('.desc .col-2.active span').text(), $('#lightSliderVertical > li:nth-child(2) > a > img').attr('src')]);
+      a.push([localStorage.getItem("id"),$('.desc .title').text(), $('.desc .price').text(), $('.desc .text-secondary').text(), $('.desc .col-2.active span').text(), $('#lightSliderVertical > li:nth-child(2) > a > img').attr('src'),$('.desc .singleColor').attr('data-color')]);
       localStorage.setItem("arr", JSON.stringify(a));
       
       localStorage.setItem("id", Number(localStorage.getItem("id"))+1);
