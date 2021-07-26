@@ -23,11 +23,15 @@
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light p-3 bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="./index2.html" class="btn position-relative d-lg-none"><i class="fas fa-shopping-bag fs-4"></i>
+                    <sup class="cartSup">0</sup> </a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -58,8 +62,8 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <a href="./index2.html" class="btn position-relative"><i class="fas fa-shopping-bag fs-4"></i> <sup
-                        class="cartSup">0</sup> </a>
+                <a href="./index2.html" class="btn position-relative d-none d-lg-block"><i
+                        class="fas fa-shopping-bag fs-4"></i> <sup class="cartSup">0</sup> </a>
             </div>
         </div>
     </nav>
@@ -79,7 +83,7 @@
             <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="main-wrapper">
-                        <div class="demo">
+                        <div class="demo position-relative">
                             <ul id="lightSliderVertical">
                                 <li data-thumb="./img/1.webp">
                                     <a href="./img/a1.webp" data-fancybox="gallery">
@@ -122,20 +126,28 @@
                                     </a>
                                 </li>
                             </ul>
+                            <div class="align-items-center bg-white bottom-0 br-10 d-flex end-0 m-3 position-absolute px-2 ratingSmall">
+                                4.4
+                                <i class="fa fa-star ms-1"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 desc">
-                    <h1 class="title">Cherry Red Full Sleeve T-Shirt</h1>
-                    <div class="subTitle">
-                        LAST SIZES LEFT - SPECIAL PRICE
+                    <h1 class="title mt-2">Cherry Red Full Sleeve T-Shirt</h1>
+                    <div class="d-flex flex-column flex-column-reverse flex-lg-column">
+                        <div class="subTitle">
+                            LAST SIZES LEFT - SPECIAL PRICE
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <h1 class="me-2 price">₹329</h1>
+                            <strike class="text-secondary">₹599</strike>
+                        </div>
                     </div>
-                    <h1 class="price">₹329</h1>
-                    <strike class="text-secondary">₹599</strike>
                     <br>
                     <small>Incl. taxes</small>
                     <div class="bg-light d-flex justify-content-between align-items-center my-2">
-                        <h5><b>₹296</b> For TriBe Members</h5><a>Know More</a>
+                        <h6><b>₹296</b> For TriBe Members</h6><a>Know More</a>
                     </div>
                     <p>Navy Blue</p>
                     <div class="colors">

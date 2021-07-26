@@ -75,12 +75,14 @@
 
 .title {
     margin-bottom: 2px;
-    font-size: 14px;
     font-family: montserrat, sans-serif;
-    line-height: 20px;
     color: rgba(0, 0, 0, 0.7);
     font-weight: 500;
+    color: #000;
+    font-size: 12px;
+    line-height: normal;
 }
+
 
 .subTitle {
     font-family: montserrat-bold, sans-serif;
@@ -194,6 +196,11 @@
 #bag {
     min-height: 500px;
 }
+
+.lSPager.lSpg {
+    display: none;
+}
+
 
 @keyframes shake {
     0% {
