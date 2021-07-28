@@ -28,6 +28,8 @@ $(document).ready(function () {
 
       $("sup.cartSup").html(Number($("sup.cartSup").html()) + 1);
 
+      window.location.href = './index2.html';
+
     }
   })
 
