@@ -135,6 +135,10 @@ $(document).ready(function () {
             <div class="invalid-feedback">
                 This field is required
             </div>
+            <input required type="text" placeholder="Tel." name="tel" class="form-control mt-2">
+            <div class="invalid-feedback">
+                This field is required
+            </div>
             <input required type="text" placeholder="State" name="state" class="form-control mt-2">
             <div class="invalid-feedback">
                 This field is required
